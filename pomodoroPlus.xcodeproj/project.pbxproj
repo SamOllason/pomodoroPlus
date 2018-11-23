@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BC99BD0821A7E858006E6BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD0721A7E858006E6BAE /* AppDelegate.swift */; };
-		BC99BD0A21A7E858006E6BAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD0921A7E858006E6BAE /* ViewController.swift */; };
+		BC99BD0A21A7E858006E6BAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD0921A7E858006E6BAE /* HomeViewController.swift */; };
 		BC99BD0D21A7E858006E6BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99BD0B21A7E858006E6BAE /* Main.storyboard */; };
 		BC99BD0F21A7E859006E6BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC99BD0E21A7E859006E6BAE /* Assets.xcassets */; };
 		BC99BD1221A7E859006E6BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC99BD1021A7E859006E6BAE /* LaunchScreen.storyboard */; };
 		BC99BD1D21A7E859006E6BAE /* pomodoroPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD1C21A7E859006E6BAE /* pomodoroPlusTests.swift */; };
 		BC99BD2821A7E859006E6BAE /* pomodoroPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD2721A7E859006E6BAE /* pomodoroPlusUITests.swift */; };
+		BC99BD3621A800CF006E6BAE /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD3521A800CF006E6BAE /* TimerViewController.swift */; };
+		BC99BD3821A8010B006E6BAE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99BD3721A8010B006E6BAE /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		BC99BD0421A7E858006E6BAE /* pomodoroPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoroPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99BD0721A7E858006E6BAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC99BD0921A7E858006E6BAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC99BD0921A7E858006E6BAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC99BD0C21A7E858006E6BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC99BD0E21A7E859006E6BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC99BD1121A7E859006E6BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		BC99BD2321A7E859006E6BAE /* pomodoroPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pomodoroPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC99BD2721A7E859006E6BAE /* pomodoroPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomodoroPlusUITests.swift; sourceTree = "<group>"; };
 		BC99BD2921A7E859006E6BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC99BD3521A800CF006E6BAE /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		BC99BD3721A8010B006E6BAE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				BC99BD0721A7E858006E6BAE /* AppDelegate.swift */,
-				BC99BD0921A7E858006E6BAE /* ViewController.swift */,
+				BC99BD0921A7E858006E6BAE /* HomeViewController.swift */,
 				BC99BD0B21A7E858006E6BAE /* Main.storyboard */,
+				BC99BD3721A8010B006E6BAE /* PhotoViewController.swift */,
+				BC99BD3521A800CF006E6BAE /* TimerViewController.swift */,
 				BC99BD0E21A7E859006E6BAE /* Assets.xcassets */,
 				BC99BD1021A7E859006E6BAE /* LaunchScreen.storyboard */,
 				BC99BD1321A7E859006E6BAE /* Info.plist */,
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC99BD0A21A7E858006E6BAE /* ViewController.swift in Sources */,
+				BC99BD0A21A7E858006E6BAE /* HomeViewController.swift in Sources */,
+				BC99BD3821A8010B006E6BAE /* PhotoViewController.swift in Sources */,
+				BC99BD3621A800CF006E6BAE /* TimerViewController.swift in Sources */,
 				BC99BD0821A7E858006E6BAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,8 +441,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S2M8C8P668;
+				DEVELOPMENT_TEAM = 496C4392T4;
 				INFOPLIST_FILE = pomodoroPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,8 +460,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S2M8C8P668;
+				DEVELOPMENT_TEAM = 496C4392T4;
 				INFOPLIST_FILE = pomodoroPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
