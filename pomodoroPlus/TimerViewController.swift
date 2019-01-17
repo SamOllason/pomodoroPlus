@@ -71,6 +71,7 @@ class TimerViewController: UIViewController {
         
         // Set the timer variable that will change as time goes down
         time = selectedTime
+        print(selectedTime);
         timeRemaningLabel.text = String(time)
         
         // Start the timer!
