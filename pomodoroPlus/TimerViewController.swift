@@ -10,9 +10,10 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
-    var selectedTime = 999
+    // In hours
+    var selectedTime = 00
     var time         = 999
-    var seconds = 60 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds      = 60 //This variable will hold a starting value of seconds. It could be any amount above 0.
    
     var timer          = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
@@ -58,10 +59,11 @@ class TimerViewController: UIViewController {
         // Don't timer to be running or paused
         self.pauseActive = false
 
-        // reset time and reflect this in label
+        // reset time  to what user selected and reflect this in label
         time = selectedTime;
-        timeRemaningLabel.text = "\(time)"
-        
+        let timeRemaining      = getStringTime()
+        timeRemaningLabel.text = "\(timeRemaining)" //Interpolation to will update the label.
+
         resumeButton.isEnabled = true;
         pauseButton.isEnabled  = false;
     }
@@ -71,9 +73,11 @@ class TimerViewController: UIViewController {
         
         // Set the timer variable that will change as time goes down
         time = selectedTime
-        print(selectedTime);
-        timeRemaningLabel.text = String(time)
+        print("selectedTime " + String(selectedTime));
         
+        let timeRemaining      = getStringTime()
+        timeRemaningLabel.text = "\(timeRemaining)" //Interpolation to will update the label.
+
         // Start the timer!
         runTimer()
         
@@ -95,14 +99,13 @@ class TimerViewController: UIViewController {
             time -= 1 // This will decrement(count down)the seconds.
         }
         
-        let timeRemaining = getStringTime()
-        
+        let timeRemaining      = getStringTime()
         timeRemaningLabel.text = "\(timeRemaining)" //Interpolation to will update the label.
     }
     
     func getStringTime() -> String {
-        let hours   = Int(time) / 60 * 60
-        let minutes = Int(time) / 60 % 60
+        let hours   = Int(floor(Double(time) / Double(60 * 60)))
+        let minutes = Int(Double(time) / Double(60)) % 60
         let seconds = Int(time) % 60
         
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)

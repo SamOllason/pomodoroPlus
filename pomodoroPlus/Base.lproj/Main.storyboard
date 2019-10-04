@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Zn-cE-Wte">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Zn-cE-Wte">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,23 +26,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-kN-Gj0">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-kN-Gj0">
                                 <rect key="frame" x="125" y="122" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Timer!"/>
                                 <connections>
                                     <segue destination="Vuy-O3-ZlC" kind="show" identifier="toTimerViewSegue" id="AzP-Yb-xgU"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1as-gu-ek8">
-                                <rect key="frame" x="0.0" y="197" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="569376000.04179299">
-                                    <!--2019-01-17 00:00:00 +0000-->
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vHy-JC-BmV">
+                                <rect key="frame" x="27.5" y="192" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="570110650.56262302">
+                                    <!--2019-01-25 12:04:10 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vHy-JC-BmV" firstAttribute="top" secondItem="n2r-kN-Gj0" secondAttribute="bottom" constant="40" id="CzU-MS-Pbs"/>
+                            <constraint firstItem="vHy-JC-BmV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27.5" id="Uv8-aj-cLh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vHy-JC-BmV" secondAttribute="bottom" constant="259" id="UxZ-bR-owl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vHy-JC-BmV" secondAttribute="trailing" constant="27.5" id="YyO-PN-Au6"/>
+                            <constraint firstItem="vHy-JC-BmV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nbY-xE-P1i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ngf-iK-gAS">
@@ -52,6 +57,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="vHy-JC-BmV" id="Aae-Yf-ehJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,10 +177,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xNN-st-Tc3">
-                                <rect key="frame" x="16" y="185" width="240" height="413"/>
+                                <rect key="frame" x="16" y="185" width="343" height="413"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">This app is an essential time management tool that makes it easier to break work into smaller and more managable chunks. Inspired but the Pomodoro technique, you can set a timer to run and alert you when it has finished. PomodoroPlus is different because it motivates you to not stop the timer and quit your task! When the timer completes you will be able to see one of your randomly selected photos from your iPhone. The suprise element of the reward will encourage you to complete your task and the memory you will be greeted with will boost positive thoughts and keep you refreshed in your break between tasks! This app was created using Swift. For more information about the author, please see www.samollason.co.uk.</string>
+                                <mutableString key="text">This app is an essential time management tool that makes it easier to break tasks into smaller and more managable chunks. Inspired but the Pomodoro technique, you can set a timer to run and alert you when it has finished. PomodoroPlus is different because it motivates you to not stop the timer and quit your task! When the timer completes you will be able to see a suprise picture. This reward will encourage you to complete your task and the memory you will be greeted with will boost positive thoughts and keep you refreshed in your break between tasks! This app was created using Swift. For more information about the author, please see www.samollason.co.uk.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
